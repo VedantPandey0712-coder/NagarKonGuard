@@ -2,6 +2,11 @@
 
 A working prototype of an AI + IoT civic operations platform. It detects issues from citizen or sensor reports, assigns an explainable priority, predicts response urgency, and displays the live city signal in a responsive dashboard.
 
+## Project Links
+
+- GitHub: https://github.com/VedantPandey0712-coder/NagarKonGuard
+- Local dashboard: http://localhost:3000
+
 ## Run
 
 Requires Node.js 18 or newer. No npm install is required.
