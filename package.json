@@ -1,0 +1,10 @@
+{
+  "name": "nagarkon-urban-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI and IoT powered civic issue intelligence platform",
+  "scripts": {
+    "start": "node backend/server.js",
+    "test": "node integration/smoke-test.js"
+  }
+}

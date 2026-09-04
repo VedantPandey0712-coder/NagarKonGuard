@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NagarKon | Urban Intelligence</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">N</span><div><strong>NagarKon</strong><small>urban intelligence</small></div></div>
+      <nav><a class="active" href="#overview">Overview</a><a href="#reports">Issue queue</a><a href="#sensors">IoT signals</a></nav>
+      <div class="sidebar-foot"><span class="pulse"></span><span>City systems online</span></div>
+    </aside>
+    <main class="content">
+      <header class="topbar"><div><p class="eyebrow">COMMAND CENTER / LIVE</p><h1>Good morning, city team.</h1><p class="subhead">A single view of what needs attention now and what is likely next.</p></div><button id="new-report" class="primary">+ Log issue</button></header>
+      <section id="overview" class="metrics" aria-label="City metrics"><article><span class="metric-label">Open issues</span><strong id="open-reports">--</strong><small>across active zones</small></article><article class="critical"><span class="metric-label">Critical now</span><strong id="critical-reports">--</strong><small>needs response today</small></article><article><span class="metric-label">Resolved today</span><strong id="resolved-today">--</strong><small>service velocity</small></article><article><span class="metric-label">Flood risk</span><strong id="flood-risk">--</strong><small id="forecast-horizon">next 6 hours</small></article></section>
+      <section class="workspace">
+        <div class="panel queue" id="reports"><div class="panel-head"><div><p class="eyebrow">AI PRIORITIZED</p><h2>Issue queue</h2></div><span id="report-count" class="count">--</span></div><div id="report-list" class="report-list"><div class="loading">Loading live queue...</div></div></div>
+        <div class="panel signals" id="sensors"><div class="panel-head"><div><p class="eyebrow">EDGE NETWORK</p><h2>IoT signals</h2></div><span class="live-tag"><span class="pulse"></span> live</span></div><div id="sensor-list" class="sensor-list"></div><div class="forecast"><div><span class="eyebrow">PREDICTIVE WATCH</span><strong>Risk engine is watching the next six hours</strong></div><span class="forecast-icon">↗</span></div></div>
+      </section>
+    </main>
+  </div>
+  <dialog id="report-dialog"><form method="dialog" id="report-form"><div class="dialog-head"><div><p class="eyebrow">NEW SIGNAL</p><h2>Log a civic issue</h2></div><button value="cancel" class="icon-button" aria-label="Close">×</button></div><label>Description<textarea name="description" required placeholder="e.g. Streetlight is out near the bus stop"></textarea></label><label>Location<input name="location" required placeholder="e.g. Market Circle"></label><label>Source<select name="source"><option value="citizen">Citizen report</option><option value="field-team">Field team</option><option value="iot">IoT alert</option></select></label><button class="primary" type="submit">Assess and add issue</button></form></dialog>
+  <script src="/app.js"></script>
+</body>
+</html>
